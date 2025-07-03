@@ -1,0 +1,16 @@
+
+
+.group-outer {
+  display: flex;
+  gap: 20px
+}
+.group {
+  display: flex;
+  gap: 10px;
+  flex-flow: column nowrap;
+  align-items: start;
+}
+.group-inner {
+  display: flex;
+  gap: 15px;
+}

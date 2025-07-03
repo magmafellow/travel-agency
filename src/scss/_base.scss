@@ -1,0 +1,18 @@
+@use 'util/variables' as *;
+
+
+html, body {
+  background-color: $bg-milk;
+}
+
+
+.responsive-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: $media-lg) {
+  .responsive-container {
+    max-width: $media-lg;
+  }
+}
