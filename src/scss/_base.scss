@@ -1,13 +1,23 @@
 @use 'util/variables' as *;
 
-
 html, body {
   background-color: $bg-milk;
+  color: $text-body;
+}
+
+.root {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+}
+.main {
+  flex-grow: 1;
 }
 
 
 .responsive-container {
   width: 100%;
+  padding: 0 10px;
   margin: 0 auto;
 }
 

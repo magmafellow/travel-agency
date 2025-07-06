@@ -2,6 +2,8 @@
 $header-txt: #17161a;
 
 $primary-a: #fa7436;
+$primary-a-strong: #ff631a;
+
 $primary-b: #222222;
 
 $secondary-a: #4086f4;
@@ -23,12 +25,21 @@ $bg-snow: #f7f8fc;
 // colors END
 
 // breakpoints
+// mobile-first breakpoints
 $media-xs: 360px;
 $media-sm: 576px;
 $media-md: 768px;
 $media-lg: 992px;
 $media-xl: 1200px;
 $media-2xl: 1400px;
+
+// desktop-first breakpoints
+$Dmedia-xs: 359.98px;
+$Dmedia-sm: 575.98px;
+$Dmedia-md: 767.98px;
+$Dmedia-lg: 991.98px;
+$Dmedia-xl: 1199.98px;
+$Dmedia-2xl: 1399.98px;
 // breakpoints END
 
 // spacing

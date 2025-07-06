@@ -20,6 +20,8 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "class-variance-authority": "^0.7.1"
+    "class-variance-authority": "^0.7.1",
+    "jquery": "^3.7.1",
+    "swiper": "^11.2.10"
   }
 }

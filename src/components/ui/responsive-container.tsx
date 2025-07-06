@@ -1,11 +1,12 @@
 
 type ComponentProps = {
   children: any
+  className?: string
 }
 
-const ResponsiveContainer = ({ children }: ComponentProps) => {
+const ResponsiveContainer = ({ children, className }: ComponentProps) => {
   return (
-    <div className="responsive-container">
+    <div className={`responsive-container ${className}`}>
       {children}
     </div>
   )

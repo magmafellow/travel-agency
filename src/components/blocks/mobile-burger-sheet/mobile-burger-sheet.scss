@@ -1,0 +1,78 @@
+@use '../../../scss/util/variables' as *;
+@use '../../../scss/typography' as *;
+
+
+.mobile-burger-sheet {
+  position: absolute;
+  transition: 300ms;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+
+  &__container {
+    padding-top: 32px;
+    padding-bottom: 48px;
+    display: flex;
+    flex-flow: column nowrap;
+    // background-color: red;
+    height: 100%;
+  }
+
+  &__btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__menu {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  &__link {
+    transition: 200ms;
+    font-size: 32px;
+    font-weight: 500;
+    color: $primary-b;
+
+    &:active {
+      text-decoration: underline;
+    }
+  }
+
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    // margin-bottom: 124px;
+
+    &-title {
+      font-size: 24px;
+      color: $primary-b;
+      font-family: $font-family-serif !important;
+      font-weight: 700 !important;
+    }
+  }
+
+
+
+  &.is-active {
+    left: 0;
+  }
+}
+
+
+.burger-sheet {
+  position: absolute;
+  left: unset;
+  top: 32px;
+  right: 16px;
+}

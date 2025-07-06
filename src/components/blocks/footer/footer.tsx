@@ -1,6 +1,12 @@
+import ResponsiveContainer from "../../ui/responsive-container"
+
 const Footer = () => {
   return (
-    <footer>Footer</footer>
+    <footer>
+      <ResponsiveContainer>
+        Footer
+      </ResponsiveContainer>
+    </footer>
   )
 }
 
