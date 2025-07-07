@@ -1,8 +1,16 @@
-@use 'util/variables' as *;
+@use "util/variables" as *;
 
-html, body {
+// blocks
+@use "blocks/logo";
+
+html,
+body {
   background-color: $bg-milk;
   color: $text-body;
+}
+html.scroll-lock, body.scroll-lock {
+  height: 100%;
+  overflow: hidden;
 }
 
 .root {
@@ -14,15 +22,54 @@ html, body {
   flex-grow: 1;
 }
 
-
 .responsive-container {
   width: 100%;
   padding: 0 10px;
   margin: 0 auto;
 }
 
+@media (min-width: $media-md) {
+  .responsive-container {
+    max-width: $media-md;
+  }
+}
 @media (min-width: $media-lg) {
   .responsive-container {
     max-width: $media-lg;
+  }
+}
+@media (min-width: $container) {
+  .responsive-container {
+    max-width: $container;
+  }
+}
+
+.social-shadow {
+  filter: drop-shadow(0px 2px 10px rgb(0, 0, 0, 0.1));
+
+  &:hover {
+    filter: drop-shadow(0px 2px 10px rgb(250, 116, 54, 0.7));
+  }
+}
+
+.general-icon {
+  transition: 200ms;
+
+  &:hover {
+    .general-icon-bg {
+      fill: $primary-a;
+    }
+    .general-icon-line {
+      fill: #fff;
+    }
+  }
+
+  &-bg {
+    transition: 200ms;
+    fill: #fff;
+  }
+  &-line {
+    transition: 200ms;
+    fill: $primary-b;
   }
 }

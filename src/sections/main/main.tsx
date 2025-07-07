@@ -1,4 +1,5 @@
-import ResponsiveContainer from "../../ui/responsive-container"
+import './main.scss';
+import ResponsiveContainer from "../../components/ui/responsive-container"
 
 const Main = () => {
   return (
