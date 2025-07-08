@@ -1,0 +1,67 @@
+@use '../../scss/util/variables' as *;
+@use '../../scss/typography' as *;
+
+
+.promote {
+  overflow: hidden;
+
+  &__container-primary {
+    display: flex;
+    align-items: end;
+    gap: 16px;
+    margin-bottom: 59px;
+  }
+
+  &__textish {
+    flex: 0 1 50%;
+  }
+  &__picturish {
+    height: 100%;
+    flex: 0 1 50%;
+
+    &-shell {
+      height: 100%;
+      display: flex;
+      align-items: end;
+    }
+  }
+  &__title {
+    color: $primary-b;
+    margin-bottom: 32px;
+  }
+  &__description {
+    margin-bottom: 64px;
+  }
+
+  &__card-minimal {
+    position: absolute;
+  }
+  &__btn-discover {
+  }
+  
+}
+.promote {
+  &__picturish {
+    &-shell {
+      position: relative;
+
+      &-guy {
+        width: 500px;
+        height: auto;
+        position: relative;
+        z-index: 10;
+      }
+      &-flies {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+      &-ellipse {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        z-index: 0;
+      }
+    }
+  }
+}

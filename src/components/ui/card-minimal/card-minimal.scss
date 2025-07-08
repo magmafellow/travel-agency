@@ -1,0 +1,29 @@
+@use "../../../scss/util/variables" as *;
+@use "../../../scss/typography" as *;
+
+$card-shadow: -8px 8px 40px rgb(0, 0, 0, .05);
+
+.card-minimal {
+  display: inline-flex;
+  align-items: center;
+  background-color: #fff;
+  gap: 10px;
+  box-shadow: $card-shadow;
+  border-radius: 10px;
+  padding: 12px 18px;
+
+  &__box {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2px;
+    align-items: start;
+  }
+  &__title {
+    font-weight: 500;
+    color: $text-strong-b;
+  }
+  &__description {
+    font-weight: normal;
+    font-size: 12px;
+  }
+}
