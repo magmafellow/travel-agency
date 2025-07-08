@@ -37,27 +37,27 @@ const Main = () => {
             />
 
             <CardMinimal
-              className="promote__card-minimal"
+              className="promote__card-minimal promote__card-minimal_google"
               title="Explore"
               description="Every cornar of the world with us"
               imgUrl="/public/images/color/google-maps.svg"
             />
             <CardMinimal
-              className="promote__card-minimal"
+              className="promote__card-minimal promote__card-minimal_award"
               title="Best Tour Awards"
               imgUrl="/public/images/color/reward.svg"
             />
             <CardMinimal
-              className="promote__card-minimal"
+              className="promote__card-minimal promote__card-minimal_star"
               title="27K"
-              description="Customer Reviewd"
+              description="Customer Review"
               imgUrl="/public/images/color/star.svg"
             />
           </div>
         </div>
       </ResponsiveContainer>
       <ResponsiveContainer className="promote__container-subsidiary">
-
+        Subsidiary part
       </ResponsiveContainer>
     </main>
   )

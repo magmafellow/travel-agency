@@ -35,6 +35,7 @@ $media-2xl: 1400px;
 
 // desktop-first breakpoints
 $Dmedia-xs: 359.98px;
+// $Dmedia-xs: 419.98px;
 $Dmedia-sm: 575.98px;
 $Dmedia-md: 767.98px;
 $Dmedia-lg: 991.98px;
@@ -60,3 +61,17 @@ $space-4xl: 120px;
 $container: 1170px;
 // desktop-first
 $Dcontainer: 1169.98px;
+
+
+// block margin
+$block-mb-2xl: 10;
+$block-mb-xl: 10;
+$block-mb-lg: 10;
+$block-mb-md: 10;
+$block-mb-sm: 10;
+
+$block-mt-2xl: 120;
+$block-mt-xl: 98;
+$block-mt-lg: 76;
+$block-mt-md: 54;
+$block-mt-sm: 32;

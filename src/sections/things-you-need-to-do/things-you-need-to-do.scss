@@ -2,9 +2,16 @@
 @use "../../scss/util/variables" as *;
 
 .things-you-need-to-do {
+  overflow: hidden;
   background-color: $bg-snow;
   padding: 120px 0;
 
+  &__flies-couple {
+    position: absolute;
+    right: 50px;
+    top: 0;
+  }
+  
   &__title {
     color: $primary-b;
     text-align: center;
@@ -35,6 +42,10 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
+    &__flies-couple {
+      right: 17px;
+    }
+    
     &__description {
       margin-bottom: 48px;
     }
@@ -43,6 +54,17 @@
 
 @media (max-width: $Dmedia-lg) {
   .things-you-need-to-do {
+    
+    &__title {
+      // font-size: 36px !important;
+    }
+
+    &__flies-couple {
+      right: -37px;
+      width: 137px;
+      height: auto;
+      
+    }
     &__grid {
       grid-template-columns: 1fr 1fr;
     }
@@ -69,9 +91,19 @@
 
 @media (max-width: $Dmedia-md) {
   .things-you-need-to-do {
+    
     padding-top: 32px;
     padding-bottom: 32px;
 
+    &__flies-couple {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &__title {
+      // font-size: 30px !important;
+    }
+    
     &__description {
       margin-bottom: 29px;
     }

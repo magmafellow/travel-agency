@@ -6,6 +6,8 @@ const ThingsYouNeedToDo = () => {
   return (
     <div className="things-you-need-to-do">
       <ResponsiveContainer className="things-you-need-to-do__container relative">
+        <img className="things-you-need-to-do__flies-couple" src="/public/images/components/sections/things-you-need-to-do/flies-couple.svg" alt="Flies couple" />
+        
         <h2 className="typo-h2 things-you-need-to-do__title">
           Things you need <span className="text-brand">to do</span>
         </h2>
