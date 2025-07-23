@@ -6,6 +6,7 @@ import XIcon from "../../icons/x"
 import FacebookIcon from "../../icons/facebook"
 
 const Footer = () => {
+  
   return (
     <footer className="footer">
       {/* footer top */}
