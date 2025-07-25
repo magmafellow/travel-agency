@@ -12,16 +12,19 @@ $font-family-sans: "Poppins", sans-serif;
 .typo-h1 {
   font-size: 64px;
   line-height: 1.1;
+  margin-bottom: 0.5em;
 }
 .typo-h2 {
   font-size: 48px;
   line-height: 1.125;
+  margin-bottom: 0.5em;
 }
 .typo-h3 {
   font-size: 24px;
   font-weight: 500;
   font-family: $font-family-sans;
   line-height: 1.08;
+  margin-bottom: 0.7em;
 }
 
 .typo-title {
@@ -31,6 +34,7 @@ $font-family-sans: "Poppins", sans-serif;
 
 [class*="typo-para"], .typo-title {
   font-family: $font-family-sans;
+  margin-bottom: 1em;
 }
 
 // typo-para-1 (transition)
@@ -42,6 +46,7 @@ $font-family-sans: "Poppins", sans-serif;
 .typo-para-b {
   font-size: 18px;
   line-height: 1.7777;
+
 }
 
 .typo-para-base {

@@ -9,7 +9,7 @@ const Logo = ({ href = "#", className }: ComponentProps) => {
       <span className="logo__title">Trabook</span>
       <img
         className="logo__img"
-        src="/public/images/front/logo.svg"
+        src="/images/front/logo.svg"
         alt="logotype svg"
       />
     </a>

@@ -4,6 +4,7 @@ import LayoutRoot from "../layout/layout-root"
 import Promote from "../sections/promote/promote"
 import ThingsYouNeedToDo from "../sections/things-you-need-to-do/things-you-need-to-do"
 import BestVacationPlan from "../sections/best-vacation-plan/best-vacation-plan"
+import WhatPeopleSay from "../sections/what-people-say/what-people-say"
 
 export default function () {
   return (
@@ -12,6 +13,7 @@ export default function () {
       <Promote />
       <ThingsYouNeedToDo />
       <BestVacationPlan />
+      <WhatPeopleSay />
       <Footer />
     </LayoutRoot>
   )

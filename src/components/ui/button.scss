@@ -58,9 +58,40 @@
   }
 }
 
+.button-circle {
+  position: relative;
+  border-radius: 999px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: 1px solid $primary-a;
+  background-color: $primary-a;
+  color: #fff;
+  transition: 200ms;
 
+  &:hover {
+    background-color: $primary-a-strong;
+  }
+  &.disabled {
+    border: 1px solid rgb(153, 153, 153, 0.5);
+    background-color: #fefcfb;
+    color: rgb(153, 153, 153, 0.5);
 
+    &:hover {
+      border: 1px solid rgb(153, 153, 153, 0.7);
+      color: rgb(153, 153, 153, 0.7);
+    }
 
+    cursor: default;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 
 // specific button
 .button__header {

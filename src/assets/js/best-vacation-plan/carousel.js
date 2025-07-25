@@ -7,5 +7,10 @@ const swiper = new Swiper(".best-vacation-plan__swiper", {
   // configure Swiper to use modules
   modules: [Navigation, Pagination],
   slidesPerView: 'auto',
+  navigation: {
+    prevEl: '.best-vacation-plan__nav_prev',
+    nextEl: '.best-vacation-plan__nav_next',
+    disabledClass: 'disabled',
+  },
   spaceBetween: 32,
 })

@@ -1,16 +1,28 @@
 import "./card-plan.scss"
 
-export default function CardPlan() {
+type Props = {
+  imgURL: string
+  imgAlt: string
+  title: string
+  price: string
+  tripLabel: string
+  starRating: string
+}
+
+export default function CardPlan({
+  imgURL,
+  imgAlt,
+  title,
+  price,
+  tripLabel,
+  starRating,
+}: Props) {
   return (
     <div className="card-plan">
-      <img
-        className="card-plan__img"
-        src="/images/components/card-plan/preview-01.png"
-        alt=""
-      />
+      <img className="card-plan__img" src={imgURL} alt={imgAlt} />
       <div className="card-plan__main-bar">
-        <div className="card-plan__title typo-h3">Rome, Italy</div>
-        <div className="card-plan__price">$5,42k</div>
+        <div className="card-plan__title typo-h3">{title}</div>
+        <div className="card-plan__price">{price}</div>
       </div>
       <div className="card-plan__sub-bar">
         <div className="card-plan__trip">
@@ -19,7 +31,7 @@ export default function CardPlan() {
             src="/images/fill/needle.svg"
             alt=""
           />
-          <div className="card-plan__trip-label">10 day Trip</div>
+          <div className="card-plan__trip-label">{tripLabel}</div>
         </div>
         <div className="card-plan__review">
           <img
@@ -27,7 +39,7 @@ export default function CardPlan() {
             src="/images/color/star.svg"
             alt=""
           />
-          <div className="card-plan__review-label">4.8</div>
+          <div className="card-plan__review-label">{starRating}</div>
         </div>
       </div>
     </div>

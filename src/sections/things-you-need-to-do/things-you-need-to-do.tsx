@@ -6,7 +6,7 @@ const ThingsYouNeedToDo = () => {
   return (
     <div className="things-you-need-to-do">
       <ResponsiveContainer className="things-you-need-to-do__container relative">
-        <img className="things-you-need-to-do__flies-couple" src="/public/images/components/sections/things-you-need-to-do/flies-couple.svg" alt="Flies couple" />
+        <img className="things-you-need-to-do__flies-couple" src="/images/sections/things-you-need-to-do/flies-couple.svg" alt="Flies couple" />
         
         <h2 className="typo-h2 things-you-need-to-do__title">
           Things you need <span className="text-brand">to do</span>
@@ -18,25 +18,25 @@ const ThingsYouNeedToDo = () => {
         <div className="things-you-need-to-do__grid">
           <CardInstruction
             className="things-you-need-to-do__card-instruction"
-            imgUrl="/public/images/outline/tasks.svg"
-            decorUrl="/public/images/components/card-instruction/left.svg"
+            imgUrl="/images/outline/tasks.svg"
+            decorUrl="/images/components/card-instruction/left.svg"
             imgAlt="Tasks img"
             title="Sign Up"
             description="Completes all the work associated with planning and processing"
           />
           <CardInstruction
             className="things-you-need-to-do__card-instruction"
-            imgUrl="/public/images/outline/wallet.svg"
-            decorUrl="/public/images/components/card-instruction/middle.svg"
+            imgUrl="/images/outline/wallet.svg"
+            decorUrl="/images/components/card-instruction/middle.svg"
             imgAlt="Wallet img"
             title="Worth of Money"
             description="After successful access then book from exclusive deals & pricing"
           />
           <CardInstruction
             className="things-you-need-to-do__card-instruction"
-            imgUrl="/public/images/outline/needle.svg"
+            imgUrl="/images/outline/needle.svg"
             imgAlt="Travel img"
-            decorUrl="/public/images/components/card-instruction/right.svg"
+            decorUrl="/images/components/card-instruction/right.svg"
             title="Exciting Travel"
             description="Start and explore a wide range of exciting travel experience."
           />

@@ -1,0 +1,57 @@
+@use "../../scss/typography" as *;
+@use "../../scss/util/variables" as *;
+
+
+.what-people-say {
+  background-color: $bg-snow;
+
+  &__title {
+    color: $primary-b;
+  }
+  &__description {
+    margin-bottom: 2em;
+  }
+  
+  &__container {
+    position: relative;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__info {
+    flex: 0 1 45%;
+  }
+
+  &__reviews {
+    flex: 0 1 55%
+  }
+
+  &__flies {
+    position: absolute;
+    right: -70px;
+    top: 0;
+  }
+
+  &__swiper {
+    width: 504px;
+    height: 245px;
+    overflow: visible;
+  }
+
+  &__slide {
+    overflow: visible !important;
+
+    &-inner {
+      width: 100%;
+      height: 100%;
+    }
+
+    
+  }
+}

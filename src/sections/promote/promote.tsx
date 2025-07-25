@@ -22,17 +22,17 @@ const Main = () => {
           <div className="promote__picturish-shell">
             <img
             className="promote__picturish-shell-guy"
-              src="/public/images/components/sections/promote/guy.png"
+              src="/images/sections/promote/guy.png"
               alt="Guy with thump up"
             />
             <img
             className="promote__picturish-shell-flies"
-              src="/public/images/components/sections/promote/flies.svg"
+              src="/images/sections/promote/flies.svg"
               alt=""
             />
             <img
             className="promote__picturish-shell-ellipse"
-              src="/public/images/components/sections/promote/ellipse-bg.svg"
+              src="/images/sections/promote/ellipse-bg.svg"
               alt=""
             />
 
@@ -40,18 +40,18 @@ const Main = () => {
               className="promote__card-minimal promote__card-minimal_google"
               title="Explore"
               description="Every cornar of the world with us"
-              imgUrl="/public/images/color/google-maps.svg"
+              imgUrl="/images/color/google-maps.svg"
             />
             <CardMinimal
               className="promote__card-minimal promote__card-minimal_award"
               title="Best Tour Awards"
-              imgUrl="/public/images/color/reward.svg"
+              imgUrl="/images/color/reward.svg"
             />
             <CardMinimal
               className="promote__card-minimal promote__card-minimal_star"
               title="27K"
               description="Customer Review"
-              imgUrl="/public/images/color/star.svg"
+              imgUrl="/images/color/star.svg"
             />
           </div>
         </div>

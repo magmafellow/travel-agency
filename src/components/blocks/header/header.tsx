@@ -11,7 +11,7 @@ const Header = () => {
           <span className="typo-h3 header__logo-title">Trabook</span>
           <img
             className="header__logo-img"
-            src="/public/images/front/logo.svg"
+            src="/images/front/logo.svg"
             alt="logotype trabook"
           />
         </a>

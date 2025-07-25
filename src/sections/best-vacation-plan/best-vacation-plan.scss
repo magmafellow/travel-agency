@@ -1,7 +1,9 @@
-
+@use "../../scss/util/variables" as *;
 
 .best-vacation-plan {
-
+  &__container {
+    position: relative;
+  }
 
   &__swiper {
     width: 100%;
@@ -9,5 +11,56 @@
   }
   &__slide {
     width: auto !important;
+  }
+  &__title {
+    color: $primary-b;
+    text-align: center;
+  }
+  &__description {
+    margin-inline: auto;
+    max-width: 521px;
+    text-align: center;
+    text-wrap: balance;
+    margin-bottom: 0;
+  }
+  &__nav {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+  &__palms {
+    position: absolute;
+    top: -7px;
+    right: 180px;
+  }
+}
+
+@media (max-width: $Dmedia-container) {
+  .best-vacation-plan {
+    &__palms {
+      top: 0px;
+      right: 90px;
+    }
+  }
+}
+
+@media (max-width: $Dmedia-lg) {
+  .best-vacation-plan {
+    &__palms {
+      top: 0px;
+      right: 30px;
+    }
+  }
+}
+
+@media (max-width: $Dmedia-md) {
+  .best-vacation-plan {
+    &__palms {
+      display: none;
+    }
+    &__nav {
+      display: none;
+    }
   }
 }
