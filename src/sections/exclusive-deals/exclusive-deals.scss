@@ -1,0 +1,39 @@
+@use "../../scss/util/variables" as *;
+
+.exclusive-deals {
+  &__title {
+    color: $primary-b;
+    text-align: center;
+  }
+  &__description {
+    max-width: 433px;
+    margin-inline: auto;
+    text-align: center;
+    text-wrap: balance;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+  &__swiper {
+    margin-bottom: 48px;
+  }
+  &__slide {
+    width: auto;
+  }
+}
+
+
+
+@media (max-width: $Dmedia-md) {
+  .exclusive-deals {
+    &__nav {
+      display: none;
+    }
+    &__swiper {
+      margin-block-end: 0px;
+    }
+  }
+}

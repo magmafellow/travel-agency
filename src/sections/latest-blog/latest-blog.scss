@@ -1,0 +1,33 @@
+@use "../../scss/util/variables" as *;
+
+.latest-blog {
+  &__title {
+    color: $primary-b;
+    text-align: center;
+    margin-bottom: 1.1em !important;
+  }
+
+  &__slide {
+    width: auto;
+  }
+  &__swiper {
+    padding-bottom: 32px;
+  }
+
+  &__pagination {
+    position: absolute;
+    transform: translate(-50%, 50%) !important;
+    left: 50% !important;
+    bottom: 16px !important;
+
+    .swiper-pagination-bullet {
+      background-color: #E5E5E5;
+      width: 14px;
+      height: 14px;
+      opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: $primary-a;
+    }
+  }
+}

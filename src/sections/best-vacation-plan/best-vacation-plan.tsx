@@ -31,6 +31,7 @@ export default function BestVacationPlan() {
           <div className="swiper-wrapper">
             <div className="best-vacation-plan__slide swiper-slide">
               <CardPlan
+                linkURL="#"
                 title="Rome, Italty"
                 price="$5,42k"
                 imgAlt="Rome trip"
@@ -41,6 +42,7 @@ export default function BestVacationPlan() {
             </div>
             <div className="best-vacation-plan__slide swiper-slide">
               <CardPlan
+                linkURL="#"
                 title="London, UK"
                 price="$2,42k"
                 imgAlt="London trip"
@@ -51,6 +53,7 @@ export default function BestVacationPlan() {
             </div>
             <div className="best-vacation-plan__slide swiper-slide">
               <CardPlan
+                linkURL="#"
                 title="Osaka, Japan"
                 price="$5,42k"
                 imgAlt="Osaka trip"
@@ -61,6 +64,7 @@ export default function BestVacationPlan() {
             </div>
             <div className="best-vacation-plan__slide swiper-slide">
               <CardPlan
+                linkURL="#"
                 title="Rome, Italty"
                 price="$5,42k"
                 imgAlt="Rome trip"
@@ -71,6 +75,7 @@ export default function BestVacationPlan() {
             </div>
             <div className="best-vacation-plan__slide swiper-slide">
               <CardPlan
+                linkURL="#"
                 title="London, UK"
                 price="$2,42k"
                 imgAlt="London trip"
@@ -81,6 +86,7 @@ export default function BestVacationPlan() {
             </div>
             <div className="best-vacation-plan__slide swiper-slide">
               <CardPlan
+                linkURL="#"
                 title="Osaka, Japan"
                 price="$5,42k"
                 imgAlt="Osaka trip"

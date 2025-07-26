@@ -4,6 +4,7 @@
 
 .what-people-say {
   background-color: $bg-snow;
+  overflow: hidden;
 
   &__title {
     color: $primary-b;
@@ -35,7 +36,7 @@
   &__flies {
     position: absolute;
     right: -70px;
-    top: 0;
+    top: -100px;
   }
 
   &__swiper {
@@ -53,5 +54,50 @@
     }
 
     
+  }
+}
+
+
+@media (max-width: $Dmedia-lg) {
+  .what-people-say {
+    &__container {
+      flex-flow: column nowrap;
+    }
+
+    &__nav {
+      margin-bottom: 50px;
+    }
+
+    &__flies {
+      top: -50px;
+    }
+  }
+}
+
+@media (max-width: $Dmedia-md) {
+  .what-people-say {
+    &__flies {
+      display: none;
+    }
+
+    &__swiper {
+      width: 100%;
+      padding-inline: 10%;
+      height: auto;
+    }
+    &__reviews {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $Dmedia-sm) {
+  .what-people-say {
+    &__swiper {
+      padding-inline: 4%;
+    }
+    &__nav {
+      margin-bottom: 30px;
+    }
   }
 }

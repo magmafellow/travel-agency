@@ -1,0 +1,124 @@
+@use "../../../scss/util/variables" as *;
+@use "../../../scss/typography" as *;
+
+.card-deal {
+  position: relative;
+  width: 270px;
+  max-width: 270px;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 2px solid rgba(102, 102, 102, 0.08);
+  background: #fefcfb;
+  padding-bottom: 32px;
+
+  &__title {
+    font-family: $font-family-sans;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.08;
+    color: $primary-b;
+  }
+
+  &__media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block-end: 32px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &-img {
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__bar {
+    &-main,
+    &-sub {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-inline: 16px;
+    }
+    &-main {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &-star {
+      width: 16px;
+      height: 16px;
+    }
+
+    &-number {
+      font-size: 16px;
+      color: $text-body;
+      line-height: 1.5;
+    }
+  }
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &-img {
+      height: 16px;
+      width: auto;
+    }
+  }
+
+  &__price-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__price-actual {
+    border-radius: 4px;
+    background: #ffe7db;
+    color: $primary-a;
+    padding-inline: 6px;
+    padding-block: 2px;
+    line-height: 1.5;
+    font-weight: 600;
+  }
+
+  &__price-old {
+    color: #999;
+    line-height: 1.5;
+    font-weight: 500;
+    text-decoration: line-through;
+  }
+
+  &__overlay {
+    transition: 200ms;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    z-index: 10;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, .2);
+  }
+
+  &__book {
+
+  }
+
+  &:hover, &:focus {
+    .card-deal__overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

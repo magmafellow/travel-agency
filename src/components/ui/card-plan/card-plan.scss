@@ -7,6 +7,14 @@
   border-radius: 16px;
   padding-bottom: 24px;
 
+  position: relative;
+  
+  &__link {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+  }
+
   &__img {
     width: 100%;
     height: auto;

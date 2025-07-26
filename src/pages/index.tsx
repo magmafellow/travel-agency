@@ -5,6 +5,8 @@ import Promote from "../sections/promote/promote"
 import ThingsYouNeedToDo from "../sections/things-you-need-to-do/things-you-need-to-do"
 import BestVacationPlan from "../sections/best-vacation-plan/best-vacation-plan"
 import WhatPeopleSay from "../sections/what-people-say/what-people-say"
+import LatestBlog from "../sections/latest-blog/latest-blog"
+import ExclusiveDeals from "../sections/exclusive-deals/exclusive-deals"
 
 export default function () {
   return (
@@ -12,8 +14,10 @@ export default function () {
       <Header />
       <Promote />
       <ThingsYouNeedToDo />
+      <ExclusiveDeals />
       <BestVacationPlan />
       <WhatPeopleSay />
+      <LatestBlog />
       <Footer />
     </LayoutRoot>
   )

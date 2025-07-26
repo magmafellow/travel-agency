@@ -1,6 +1,7 @@
 import "./card-plan.scss"
 
 type Props = {
+  linkURL: string
   imgURL: string
   imgAlt: string
   title: string
@@ -10,6 +11,7 @@ type Props = {
 }
 
 export default function CardPlan({
+  linkURL,
   imgURL,
   imgAlt,
   title,
@@ -19,6 +21,8 @@ export default function CardPlan({
 }: Props) {
   return (
     <div className="card-plan">
+      <a className="card-plan__link" href={linkURL}></a>
+      
       <img className="card-plan__img" src={imgURL} alt={imgAlt} />
       <div className="card-plan__main-bar">
         <div className="card-plan__title typo-h3">{title}</div>
