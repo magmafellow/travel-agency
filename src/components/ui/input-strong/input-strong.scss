@@ -1,0 +1,82 @@
+@use "../../../scss/typography" as *;
+@use "../../../scss/util/variables" as *;
+
+.input-strong {
+  position: relative;
+
+  &__element {
+    transition: all 200ms;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    padding-left: 48px;
+    padding-right: 150px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    outline: none;
+    box-shadow: none;
+    color: $text-body;
+
+    &:hover {
+      border-color: #bbb;
+      background-color: #f1f1f1;
+    }
+    &:focus {
+      border-color: #bbb;
+      background-color: #fff;
+    }
+    
+    &:focus + label,
+    &:not(:placeholder-shown) + label {
+      transform: translate(0, 0) scale(0.7);
+      top: 2px;
+      left: 6px;
+      color: $text-body;
+    }
+
+  }
+
+  &__label {
+    transition: all 200ms, color 250ms;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 49px;
+    transform: translate(0, -50%) scale(1);
+    color: #999;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 22px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 9px;
+    transition: all 200ms;
+    background-color: $primary-a;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 26px;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: $primary-a-strong;
+    }
+  }
+}

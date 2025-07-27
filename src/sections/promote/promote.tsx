@@ -2,36 +2,40 @@ import "./promote.scss"
 import ResponsiveContainer from "../../components/ui/responsive-container"
 import { Button } from "../../components/ui/button"
 import CardMinimal from "../../components/ui/card-minimal/card-minimal"
+import PromoteBanner from "../../components/ui/promote-banner/promote-banner"
 
 const Main = () => {
   return (
-    <main className="grow promote">
+    <main className="grow promote section-base">
       <ResponsiveContainer className="promote__container-primary">
         <div className="promote__textish">
           <h1 className="promote__title typo-h1">
-            Get started your exciting <span className="text-brand">journey</span> with us.
+            Get started your exciting{" "}
+            <span className="text-brand">journey</span> with us.
           </h1>
           <p className="promote__description typo-para-a">
             A Team of experienced tourism professionals will provide you with
             the best advice and tips for your desire place.
           </p>
-          <Button className="promote__btn-discover button_brand button_outline">Discover Now</Button>
+          <Button className="promote__btn-discover button_brand button_outline">
+            Discover Now
+          </Button>
         </div>
         <div className="promote__picturish">
           {/* Relative container for decorations */}
           <div className="promote__picturish-shell">
             <img
-            className="promote__picturish-shell-guy"
+              className="promote__picturish-shell-guy"
               src="/images/sections/promote/guy.png"
               alt="Guy with thump up"
             />
             <img
-            className="promote__picturish-shell-flies"
+              className="promote__picturish-shell-flies"
               src="/images/sections/promote/flies.svg"
               alt=""
             />
             <img
-            className="promote__picturish-shell-ellipse"
+              className="promote__picturish-shell-ellipse"
               src="/images/sections/promote/ellipse-bg.svg"
               alt=""
             />
@@ -57,7 +61,15 @@ const Main = () => {
         </div>
       </ResponsiveContainer>
       <ResponsiveContainer className="promote__container-subsidiary">
-        Subsidiary part
+        <PromoteBanner
+          label1="Location"
+          label2="Date"
+          label3="Guest"
+          text1="Where are you going"
+          text2="When you go"
+          text3="Number of guest"
+          className="promote__promote-banner"
+        />
       </ResponsiveContainer>
     </main>
   )

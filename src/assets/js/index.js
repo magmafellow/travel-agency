@@ -9,3 +9,12 @@ import "./exclusive-deals/carousel"
 
 // gsap
 import "./latest-blog/gsap"
+
+// validation
+import "./subscribe/validation"
+
+// learn floating
+import "./learn-tooltip/index"
+
+// learn tippy
+import "./learn-tippy/main"

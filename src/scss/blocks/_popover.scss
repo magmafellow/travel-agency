@@ -1,0 +1,23 @@
+
+
+
+// cleaning
+.general-popover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 0;
+  max-width: none !important;
+  // max-width: 400px !important;
+
+  & .tippy-content {
+    padding: 0;
+  }
+
+  & .tippy-arrow {
+
+    &::before {
+      color: rebeccapurple;
+    }
+  }
+}

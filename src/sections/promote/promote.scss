@@ -1,6 +1,5 @@
-@use '../../scss/util/variables' as *;
-@use '../../scss/typography' as *;
-
+@use "../../scss/util/variables" as *;
+@use "../../scss/typography" as *;
 
 .promote {
   overflow: hidden;
@@ -58,7 +57,10 @@
   }
   &__btn-discover {
   }
-  
+
+  &__promote-banner {
+    margin-inline: auto;
+  }
 }
 .promote {
   &__picturish {
@@ -86,7 +88,6 @@
     }
   }
 }
-
 
 // @media (max-width: $some) {
 //   .promote {
@@ -118,10 +119,8 @@
     }
 
     &__picturish {
-
       &-shell {
-        
-        &-guy { 
+        &-guy {
           width: 380px;
         }
         &-flies {
@@ -133,10 +132,8 @@
   }
 }
 
-
 @media (max-width: $Dmedia-lg) {
   .promote {
-
     &__title {
       font-size: 42px !important;
       text-align: center;
@@ -153,14 +150,13 @@
       display: flex;
       min-width: 300px;
     }
-    
+
     &__container-primary {
       flex-flow: column-reverse nowrap;
       align-items: stretch;
     }
 
     &__picturish {
-
       &-shell {
         justify-content: center;
       }
@@ -179,7 +175,6 @@
 
 @media (max-width: $Dmedia-md) {
   .promote {
-
     &__title {
       font-size: 36px !important;
     }
@@ -194,12 +189,11 @@
 
 @media (max-width: $Dmedia-sm) {
   .promote {
-
     .card-minimal__title {
       color: rgb(255, 255, 255);
     }
     .card-minimal__description {
-      color: rgb(255, 255, 255, .7);
+      color: rgb(255, 255, 255, 0.7);
     }
 
     &__title {
@@ -210,13 +204,16 @@
       font-size: 16px !important;
       margin-bottom: 32px;
     }
-    
-    &__card-minimal {
-      background-color: rgb(255, 255, 255, .01) !important;
-      // background-image: linear-gradient(to right, #fff, rgb(255, 255, 255, .2)) !important;
-      background-image: linear-gradient(to right, rgb(250, 116, 54, .9), #ce6bf5) !important;
 
-      
+    &__card-minimal {
+      background-color: rgb(255, 255, 255, 0.01) !important;
+      // background-image: linear-gradient(to right, #fff, rgb(255, 255, 255, .2)) !important;
+      background-image: linear-gradient(
+        to right,
+        rgb(250, 116, 54, 0.9),
+        #ce6bf5
+      ) !important;
+
       &_google {
         inset: auto;
         left: 0px;
@@ -234,9 +231,8 @@
         top: 0px;
       }
     }
-    
-    &__picturish {
 
+    &__picturish {
       &-shell {
         justify-content: end;
 
@@ -254,13 +250,12 @@
 
 @media (max-width: 419.98px) {
   .promote {
-
     .promote__card-minimal_award {
       .card-minimal__title {
         color: #fff;
         padding: 3.5px;
         border-radius: 3.5px;
-        background-color: rgb(250, 116, 54, .9);
+        background-color: rgb(250, 116, 54, 0.9);
       }
     }
     &__card-minimal {
@@ -270,10 +265,10 @@
         padding: 3.5px;
         border-radius: 3.5px;
         font-weight: 500;
-        background-color: rgb(250, 116, 54, .9);
+        background-color: rgb(250, 116, 54, 0.9);
       }
     }
-    
+
     &__picturish {
       &-shell {
         justify-content: center;

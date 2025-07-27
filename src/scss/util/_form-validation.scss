@@ -1,0 +1,13 @@
+.form-group {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 4px;
+  
+  &.has-danger {
+    .pristine-error {
+      color: rgb(190, 0, 0);
+      text-decoration: underline;
+      text-decoration-color: rgb(175, 0, 0);
+    }
+  }
+}

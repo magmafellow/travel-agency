@@ -1,0 +1,71 @@
+@use "../../scss/util/variables" as *;
+@use "../../scss/typography" as *;
+
+.subscribe-section {
+  &__block {
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 16px;
+    background-color: $primary-a;
+    padding-block: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    max-width: 708px;
+    margin-inline: auto;
+    text-align: center;
+    color: #fff;
+    line-height: 1.5;
+  }
+
+  &__block-inner {
+    position: relative;
+    z-index: 10;
+    gap: 64px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  &__ellipse {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  &__palms {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+
+@media (max-width: $Dmedia-md) {
+  .subscribe-section {
+    &__block-inner {
+      gap: 32px;
+      padding-inline: 8px;
+    }
+
+    &__input {
+      height: 50px !important;
+      width: 100%;
+      padding-right: 124px !important;
+
+      &-button {
+        height: 44px !important;
+      }
+
+      &:focus + label, &:not(:placeholder-shown) + label {
+        top: -2px !important;
+      }
+    }
+  }
+
+  
+}

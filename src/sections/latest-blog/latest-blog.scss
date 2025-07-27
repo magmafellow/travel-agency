@@ -11,14 +11,14 @@
     width: auto;
   }
   &__swiper {
-    padding-bottom: 32px;
+    padding-bottom: 60px;
   }
 
   &__pagination {
     position: absolute;
     transform: translate(-50%, 50%) !important;
     left: 50% !important;
-    bottom: 16px !important;
+    bottom: 30px !important;
 
     .swiper-pagination-bullet {
       background-color: #E5E5E5;

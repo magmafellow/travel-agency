@@ -1,7 +1,11 @@
 @use 'util/variables';
 @use 'util/reset';
 @use 'util/tw';
+@use 'util/form-validation';
 @use 'typography';
 @use 'base';
 
-@use 'dialog';
+
+@use 'blocks/dialog';
+@use 'blocks/tooltip';
+@use 'blocks/popover';

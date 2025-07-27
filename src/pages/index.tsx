@@ -7,6 +7,7 @@ import BestVacationPlan from "../sections/best-vacation-plan/best-vacation-plan"
 import WhatPeopleSay from "../sections/what-people-say/what-people-say"
 import LatestBlog from "../sections/latest-blog/latest-blog"
 import ExclusiveDeals from "../sections/exclusive-deals/exclusive-deals"
+import Subscribe from "../sections/subscribe/subscribe"
 
 export default function () {
   return (
@@ -18,6 +19,7 @@ export default function () {
       <BestVacationPlan />
       <WhatPeopleSay />
       <LatestBlog />
+      <Subscribe />
       <Footer />
     </LayoutRoot>
   )
