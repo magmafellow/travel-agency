@@ -1,0 +1,13 @@
+@use "../util/variables" as *;
+
+.date-input {
+  padding: 4px;
+  border: 1px solid skyblue;
+  border-radius: 8px;
+  color: $primary-b;
+  outline: none;
+
+  &:focus {
+    border: 1px solid rgb(72, 140, 167);
+  }
+}

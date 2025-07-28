@@ -4,13 +4,13 @@ import "./button.scss"
 type ButtonProps = {
   children: ReactNode
   className?: string
-}
+} & React.ComponentProps<'button'>
 
-export const ButtonBrand = ({ children, className }: ButtonProps) => {
+export const ButtonBrand = ({ children, className, ...props }: ButtonProps) => {
   return (
-    <div className={`button button_primary button_brand ${className}`}>
+    <button className={`button button_primary button_brand ${className}`} {...props}>
       {children}
-    </div>
+    </button>
   )
 }
 

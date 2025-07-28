@@ -1,4 +1,4 @@
-
+@use '../util/variables' as *;
 
 
 // cleaning
@@ -7,7 +7,7 @@
   color: #000;
   border: 1px solid #000;
   border-radius: 0;
-  max-width: none !important;
+  max-width: none;
   // max-width: 400px !important;
 
   & .tippy-content {
@@ -19,5 +19,26 @@
     &::before {
       color: rebeccapurple;
     }
+  }
+}
+
+
+
+// styles
+.general-popover {
+  background-color: #fff;
+  color: $text-body;
+  border: 1px solid rgb(0, 0, 0, .1);
+  border-radius: 10px;
+  width: 100vw;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgb(0, 0, 0, .1);
+
+  & .tippy-content {
+    padding: 10px 12px;
+  }
+
+  & .tippy-arrow {
+    display: none;
   }
 }

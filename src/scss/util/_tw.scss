@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -8,6 +10,14 @@
   margin-bottom: 1.5rem;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .relative {
   position: relative;
+}
+
+.text-primary-b {
+  color: $primary-b;
 }

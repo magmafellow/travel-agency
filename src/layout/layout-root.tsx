@@ -1,5 +1,6 @@
 import { Head } from "minista"
 import MobileBurgerSheet from "../components/blocks/mobile-burger-sheet/mobile-burger-sheet"
+import Popovers from "../sections/popovers/popovers"
 
 const LayoutRoot = ({ children }: { children: any }) => {
   return (
@@ -32,12 +33,21 @@ const LayoutRoot = ({ children }: { children: any }) => {
         {/* Pristine Validation */}
         <script src="/libs/pristine.js"></script>
 
+        {/* Date&Time Picker */}
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="https://npmcdn.com/flatpickr/dist/l10n/ru.js"></script>
+        
         {/* Custom code */}
         <link rel="stylesheet" href="/src/scss/main.scss" />
         <script type="module" src="/src/assets/js/index.js"></script>
       </Head>
       <div className="root typo-para-base">{children}</div>
 
+      <Popovers />
       <MobileBurgerSheet />
     </>
   )

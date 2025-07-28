@@ -13,8 +13,17 @@ import "./latest-blog/gsap"
 // validation
 import "./subscribe/validation"
 
+// popover
+import './promote/popovers'
+
+// datepicker
+import './promote/datepicker'
+
+
+
+
+
 // learn floating
 import "./learn-tooltip/index"
-
 // learn tippy
 import "./learn-tippy/main"

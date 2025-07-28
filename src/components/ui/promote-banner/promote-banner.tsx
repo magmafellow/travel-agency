@@ -24,8 +24,13 @@ export default function PromoteBanner({
     <div className={`promote-banner ${className}`}>
       <div className="promote-banner__trigger-box">
         <div className="promote-banner__cell">
-          <div className="promote-banner__trigger">
-            <div className="promote-banner__trigger-label typo-content">{label1}</div>
+          <div
+            className="promote-banner__trigger"
+            id="tippy-trigger-promote-location"
+          >
+            <div className="promote-banner__trigger-label typo-content">
+              {label1}
+            </div>
             <img
               className="promote-banner__trigger-icon"
               src="/images/fill/down.svg"
@@ -35,19 +40,30 @@ export default function PromoteBanner({
           <div className="promote-banner__text">{text1}</div>
         </div>
         <div className="promote-banner__cell">
-          <div className="promote-banner__trigger">
-            <div className="promote-banner__trigger-label typo-content">{label2}</div>
+          <div
+            className="promote-banner__trigger"
+            id="tippy-trigger-promote-date"
+          >
+            <div className="promote-banner__trigger-label typo-content">
+              {label2}
+            </div>
             <img
               className="promote-banner__trigger-icon"
               src="/images/fill/down.svg"
               alt="Down icon"
             />
+            <div className="promote-banner__inline-date" id='promote-banner-inline-date'>date not selected</div>
           </div>
           <div className="promote-banner__text">{text2}</div>
         </div>
         <div className="promote-banner__cell">
-          <div className="promote-banner__trigger">
-            <div className="promote-banner__trigger-label typo-content">{label3}</div>
+          <div
+            className="promote-banner__trigger"
+            id="tippy-trigger-promote-guest"
+          >
+            <div className="promote-banner__trigger-label typo-content">
+              {label3}
+            </div>
             <img
               className="promote-banner__trigger-icon"
               src="/images/fill/down.svg"
