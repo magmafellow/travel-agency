@@ -12,5 +12,5 @@ document.addEventListener("DOMContentLoaded", function () {
     locale: 'ru'
   })
 
-  console.log("instance: ", fp)
+  // console.log("instance: ", fp)
 })

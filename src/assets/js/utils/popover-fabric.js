@@ -10,14 +10,15 @@ export default function popoverFabric(triggerSelector, popoverSelector, blockScr
       tippyBox.classList.add("general-popover")
 
       // Make delegation. It will save you
-      if (ctaSelector) {
-        setTimeout(() => {
-          const actionButton = document.querySelector(ctaSelector)
-          actionButton.addEventListener('click', function() {
-            instance.hide()
-          })
-        }, 500)
+
+      function onCTAHandler(event) {
+        if (event.target.closest(ctaSelector)) {
+          instance.hide()
+          console.log(`CTA [${ctaSelector}] pressed`)
+        }
       }
+      
+      window.addEventListener('click', onCTAHandler)
     },
     onShow: (instance) => {
       const popper = instance.popper

@@ -23,13 +23,13 @@ export default function InputStrong({
   ...props
 }: Props) {
   return (
-    <div className={`input-strong ${wrapperClass}`}>
-      <input className={`input-strong__element ${className}`} {...props} />
-      <label className={`input-strong__label ${labelClass}`} htmlFor={htmlFor}>
+    <div className={`input-strong ${wrapperClass ? wrapperClass : ''}`}>
+      <input className={`input-strong__element ${className ? className : ''}`} {...props} />
+      <label className={`input-strong__label ${labelClass ? labelClass : ''}`} htmlFor={htmlFor}>
         {label}
       </label>
 
-      <button className={`${buttonClass} input-strong__button`}>
+      <button className={`${buttonClass ? buttonClass : ''} input-strong__button`}>
         {buttonText}
       </button>
       <img className="input-strong__icon" src={imgURL} alt="Email" />

@@ -16,7 +16,7 @@ export default function Subscribe() {
                 required
                 minLength={3}
                 maxLength={32}
-                data-pristine-email-message="Correct email expected"
+                data-pristine-email-message="You provided incorrect email address"
                 className="subscribe-section__input"
                 buttonClass="subscribe-section__input-button"
                 imgURL="/images/sections/subscribe/email.svg"

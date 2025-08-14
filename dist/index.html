@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <script defer="true" src="https://cdn.jsdelivr.net/npm/a11y-dialog@8/dist/a11y-dialog.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="/libs/pristine.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/ru.js"></script>
+    <script type="module" src="/assets/index.js"></script>
+    <link rel="stylesheet" href="/assets/bundle.css">
+  </head>
+  <body>
+    <div class="root typo-para-base">
+      <header class="header">
+        <div class="responsive-container header__container">
+          <a href="#" class="header__logo"><span class="typo-h3 header__logo-title">Trabook</span>
+            <img class="header__logo-img" src="/images/front/logo.svg" alt="logotype trabook">
+          </a>
+          <div class="header__nav">
+            <ul class="header__menu menu-nav">
+              <li class="menu-nav__item">
+                <a class="menu-nav__link" href="#">Home</a>
+              </li>
+              <li class="menu-nav__item">
+                <a class="menu-nav__link" href="#">About</a>
+              </li>
+              <li class="menu-nav__item">
+                <a class="menu-nav__link" href="#">Destination</a>
+              </li>
+              <li class="menu-nav__item">
+                <a class="menu-nav__link" href="#">Tour</a>
+              </li>
+              <li class="menu-nav__item">
+                <a class="menu-nav__link" href="#">Blog</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__btn-container">
+            <button class="button button_brand button_ghost">Login</button>
+            <button class="button button_brand button_primary button__header">Sign up</button>
+          </div>
+          <div class="burger burger-header"><span class="burger__stick burger__stick_01"></span><span class="burger__stick burger__stick_02"></span><span class="burger__stick burger__stick_03"></span></div>
+        </div>
+      </header>
+      <main class="grow promote section-base">
+        <div class="responsive-container promote__container-primary">
+          <div class="promote__textish">
+            <h1 class="promote__title typo-h1">Get started your exciting<!-- --> <span class="text-brand">journey</span> with us.</h1>
+            <p class="promote__description typo-para-a">A Team of experienced tourism professionals will provide you with the best advice and tips for your desire place.</p>
+            <button class="button promote__btn-discover button_brand button_outline">Discover Now</button>
+          </div>
+          <div class="promote__picturish">
+            <div class="promote__picturish-shell">
+              <img class="promote__picturish-shell-guy" src="/images/sections/promote/guy.png" alt="Guy with thump up">
+              <img class="promote__picturish-shell-flies" src="/images/sections/promote/flies.svg" alt="">
+              <img class="promote__picturish-shell-ellipse" src="/images/sections/promote/ellipse-bg.svg" alt="">
+              <div class="card-minimal promote__card-minimal promote__card-minimal_google">
+                <img class="card-minimal__img" src="/images/color/google-maps.svg" alt="">
+                <div class="card-minimal__box">
+                  <div class="card-minimal__title">Explore</div>
+                  <div class="card-minimal__description">Every cornar of the world with us</div>
+                </div>
+              </div>
+              <div class="card-minimal promote__card-minimal promote__card-minimal_award">
+                <img class="card-minimal__img" src="/images/color/reward.svg" alt="">
+                <div class="card-minimal__box">
+                  <div class="card-minimal__title">Best Tour Awards</div>
+                </div>
+              </div>
+              <div class="card-minimal promote__card-minimal promote__card-minimal_star">
+                <img class="card-minimal__img" src="/images/color/star.svg" alt="">
+                <div class="card-minimal__box">
+                  <div class="card-minimal__title">27K</div>
+                  <div class="card-minimal__description">Customer Review</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="responsive-container promote__container-subsidiary">
+          <div class="promote-banner promote__promote-banner">
+            <div class="promote-banner__trigger-box">
+              <div class="promote-banner__cell">
+                <div class="promote-banner__trigger" id="tippy-trigger-promote-location">
+                  <div class="promote-banner__trigger-label typo-content">Location</div>
+                  <img class="promote-banner__trigger-icon" src="/images/fill/down.svg" alt="Down icon">
+                </div>
+                <div class="promote-banner__text">Where are you going</div>
+              </div>
+              <div class="promote-banner__cell">
+                <div class="promote-banner__trigger" id="tippy-trigger-promote-date">
+                  <div class="promote-banner__trigger-label typo-content">Date</div>
+                  <img class="promote-banner__trigger-icon" src="/images/fill/down.svg" alt="Down icon">
+                  <div class="promote-banner__inline-date" id="promote-banner-inline-date">date not selected</div>
+                </div>
+                <div class="promote-banner__text">When you go</div>
+              </div>
+              <div class="promote-banner__cell">
+                <div class="promote-banner__trigger" id="tippy-trigger-promote-guest">
+                  <div class="promote-banner__trigger-label typo-content">Guest</div>
+                  <img class="promote-banner__trigger-icon" src="/images/fill/down.svg" alt="Down icon">
+                </div>
+                <div class="promote-banner__text">Number of guest</div>
+              </div>
+            </div>
+            <div class="promote-banner__action-box">
+              <button class="button button_primary button_brand undefined">Explore Now</button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="things-you-need-to-do">
+        <div class="responsive-container things-you-need-to-do__container relative">
+          <img class="things-you-need-to-do__flies-couple" src="/images/sections/things-you-need-to-do/flies-couple.svg" alt="Flies couple">
+          <h2 class="typo-h2 things-you-need-to-do__title">Things you need <span class="text-brand">to do</span></h2>
+          <p class="things-you-need-to-do__description typo-para-b">We ensure that you’ll embark on a perfectly planned, safe vacation at a price you can afford.</p>
+          <div class="things-you-need-to-do__grid">
+            <div class="card-instruction things-you-need-to-do__card-instruction">
+              <div class="card-instruction__decor">
+                <img class="card-instruction__decor-elem" srcset="/images/components/card-instruction/left.svg" alt="decor left item">
+              </div>
+              <div class="card-instruction__picture">
+                <img class="card-instruction__picture-img" src="/images/outline/tasks.svg" alt="Tasks img">
+              </div>
+              <div class="card-instruction__title typo-title">Sign Up</div>
+              <div class="card-instruction__description">Completes all the work associated with planning and processing</div>
+            </div>
+            <div class="card-instruction things-you-need-to-do__card-instruction">
+              <div class="card-instruction__decor">
+                <img class="card-instruction__decor-elem" srcset="/images/components/card-instruction/middle.svg" alt="decor left item">
+              </div>
+              <div class="card-instruction__picture">
+                <img class="card-instruction__picture-img" src="/images/outline/wallet.svg" alt="Wallet img">
+              </div>
+              <div class="card-instruction__title typo-title">Worth of Money</div>
+              <div class="card-instruction__description">After successful access then book from exclusive deals &amp; pricing</div>
+            </div>
+            <div class="card-instruction things-you-need-to-do__card-instruction">
+              <div class="card-instruction__decor">
+                <img class="card-instruction__decor-elem" srcset="/images/components/card-instruction/right.svg" alt="decor left item">
+              </div>
+              <div class="card-instruction__picture">
+                <img class="card-instruction__picture-img" src="/images/outline/needle.svg" alt="Travel img">
+              </div>
+              <div class="card-instruction__title typo-title">Exciting Travel</div>
+              <div class="card-instruction__description">Start and explore a wide range of exciting travel experience.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="exclusive-deals section-base">
+        <div class="responsive-container exclusive-deals__container">
+          <h2 class="exclusive-deals__title typo-h2">Exclusive <span class="text-brand">deals &amp; discounts</span></h2>
+          <p class="exclusive-deals__description typo-para-b">Discover our fantastic early booking discounts &amp; start planning your journey.</p>
+          <div class="exclusive-deals__swiper swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide exclusive-deals__slide">
+                <div class="card-deal" tabindex="0">
+                  <div class="card-deal__media">
+                    <img class="card-deal__media-img" src="/images/sections/exclusive-deals/original-01.jpg" alt="Madrid">
+                  </div>
+                  <div class="card-deal__bar-main">
+                    <div class="card-deal__title">Madrid</div>
+                    <div class="card-deal__rating">
+                      <img src="/images/color/star.svg" class="card-deal__rating-star">
+                      <div class="card-deal__rating-number">4.8</div>
+                    </div>
+                  </div>
+                  <div class="card-deal__bar-sub">
+                    <div class="card-deal__location">
+                      <img src="/images/fill/mark.svg" class="card-deal__location-img">
+                      <div class="card-deal__locationg-name">Spain</div>
+                    </div>
+                    <div class="card-deal__price-box">
+                      <div class="card-deal__price-old">$950</div>
+                      <div class="card-deal__price-actual">$850</div>
+                    </div>
+                  </div>
+                  <div class="card-deal__overlay">
+                    <button class="button button_primary button_brand card-deal__book">Book Now</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide exclusive-deals__slide">
+                <div class="card-deal" tabindex="0">
+                  <div class="card-deal__media">
+                    <img class="card-deal__media-img" src="/images/sections/exclusive-deals/original-02.jpg" alt="Italy">
+                  </div>
+                  <div class="card-deal__bar-main">
+                    <div class="card-deal__title">Firenze</div>
+                    <div class="card-deal__rating">
+                      <img src="/images/color/star.svg" class="card-deal__rating-star">
+                      <div class="card-deal__rating-number">4.5</div>
+                    </div>
+                  </div>
+                  <div class="card-deal__bar-sub">
+                    <div class="card-deal__location">
+                      <img src="/images/fill/mark.svg" class="card-deal__location-img">
+                      <div class="card-deal__locationg-name">Italy</div>
+                    </div>
+                    <div class="card-deal__price-box">
+                      <div class="card-deal__price-old">$850</div>
+                      <div class="card-deal__price-actual">$750</div>
+                    </div>
+                  </div>
+                  <div class="card-deal__overlay">
+                    <button class="button button_primary button_brand card-deal__book">Book Now</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide exclusive-deals__slide">
+                <div class="card-deal" tabindex="0">
+                  <div class="card-deal__media">
+                    <img class="card-deal__media-img" src="/images/sections/exclusive-deals/original-03.jpg" alt="Paris">
+                  </div>
+                  <div class="card-deal__bar-main">
+                    <div class="card-deal__title">Paris</div>
+                    <div class="card-deal__rating">
+                      <img src="/images/color/star.svg" class="card-deal__rating-star">
+                      <div class="card-deal__rating-number">4.4</div>
+                    </div>
+                  </div>
+                  <div class="card-deal__bar-sub">
+                    <div class="card-deal__location">
+                      <img src="/images/fill/mark.svg" class="card-deal__location-img">
+                      <div class="card-deal__locationg-name">France</div>
+                    </div>
+                    <div class="card-deal__price-box">
+                      <div class="card-deal__price-old">$699</div>
+                      <div class="card-deal__price-actual">$599</div>
+                    </div>
+                  </div>
+                  <div class="card-deal__overlay">
+                    <button class="button button_primary button_brand card-deal__book">Book Now</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide exclusive-deals__slide">
+                <div class="card-deal" tabindex="0">
+                  <div class="card-deal__media">
+                    <img class="card-deal__media-img" src="/images/sections/exclusive-deals/original-04.jpg" alt="UK">
+                  </div>
+                  <div class="card-deal__bar-main">
+                    <div class="card-deal__title">London</div>
+                    <div class="card-deal__rating">
+                      <img src="/images/color/star.svg" class="card-deal__rating-star">
+                      <div class="card-deal__rating-number">4.4</div>
+                    </div>
+                  </div>
+                  <div class="card-deal__bar-sub">
+                    <div class="card-deal__location">
+                      <img src="/images/fill/mark.svg" class="card-deal__location-img">
+                      <div class="card-deal__locationg-name">UK</div>
+                    </div>
+                    <div class="card-deal__price-box">
+                      <div class="card-deal__price-actual">$850</div>
+                    </div>
+                  </div>
+                  <div class="card-deal__overlay">
+                    <button class="button button_primary button_brand card-deal__book">Book Now</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide exclusive-deals__slide">
+                <div class="card-deal" tabindex="0">
+                  <div class="card-deal__media">
+                    <img class="card-deal__media-img" src="/images/sections/exclusive-deals/original-01.jpg" alt="Madrid">
+                  </div>
+                  <div class="card-deal__bar-main">
+                    <div class="card-deal__title">Madrid</div>
+                    <div class="card-deal__rating">
+                      <img src="/images/color/star.svg" class="card-deal__rating-star">
+                      <div class="card-deal__rating-number">4.8</div>
+                    </div>
+                  </div>
+                  <div class="card-deal__bar-sub">
+                    <div class="card-deal__location">
+                      <img src="/images/fill/mark.svg" class="card-deal__location-img">
+                      <div class="card-deal__locationg-name">Spain</div>
+                    </div>
+                    <div class="card-deal__price-box">
+                      <div class="card-deal__price-old">$950</div>
+                      <div class="card-deal__price-actual">$850</div>
+                    </div>
+                  </div>
+                  <div class="card-deal__overlay">
+                    <button class="button button_primary button_brand card-deal__book">Book Now</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide exclusive-deals__slide">
+                <div class="card-deal" tabindex="0">
+                  <div class="card-deal__media">
+                    <img class="card-deal__media-img" src="/images/sections/exclusive-deals/original-02.jpg" alt="Italy">
+                  </div>
+                  <div class="card-deal__bar-main">
+                    <div class="card-deal__title">Firenze</div>
+                    <div class="card-deal__rating">
+                      <img src="/images/color/star.svg" class="card-deal__rating-star">
+                      <div class="card-deal__rating-number">4.5</div>
+                    </div>
+                  </div>
+                  <div class="card-deal__bar-sub">
+                    <div class="card-deal__location">
+                      <img src="/images/fill/mark.svg" class="card-deal__location-img">
+                      <div class="card-deal__locationg-name">Italy</div>
+                    </div>
+                    <div class="card-deal__price-box">
+                      <div class="card-deal__price-old">$850</div>
+                      <div class="card-deal__price-actual">$750</div>
+                    </div>
+                  </div>
+                  <div class="card-deal__overlay">
+                    <button class="button button_primary button_brand card-deal__book">Book Now</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide exclusive-deals__slide">
+                <div class="card-deal" tabindex="0">
+                  <div class="card-deal__media">
+                    <img class="card-deal__media-img" src="/images/sections/exclusive-deals/original-03.jpg" alt="Paris">
+                  </div>
+                  <div class="card-deal__bar-main">
+                    <div class="card-deal__title">Paris</div>
+                    <div class="card-deal__rating">
+                      <img src="/images/color/star.svg" class="card-deal__rating-star">
+                      <div class="card-deal__rating-number">4.4</div>
+                    </div>
+                  </div>
+                  <div class="card-deal__bar-sub">
+                    <div class="card-deal__location">
+                      <img src="/images/fill/mark.svg" class="card-deal__location-img">
+                      <div class="card-deal__locationg-name">France</div>
+                    </div>
+                    <div class="card-deal__price-box">
+                      <div class="card-deal__price-old">$699</div>
+                      <div class="card-deal__price-actual">$599</div>
+                    </div>
+                  </div>
+                  <div class="card-deal__overlay">
+                    <button class="button button_primary button_brand card-deal__book">Book Now</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide exclusive-deals__slide">
+                <div class="card-deal" tabindex="0">
+                  <div class="card-deal__media">
+                    <img class="card-deal__media-img" src="/images/sections/exclusive-deals/original-04.jpg" alt="UK">
+                  </div>
+                  <div class="card-deal__bar-main">
+                    <div class="card-deal__title">London</div>
+                    <div class="card-deal__rating">
+                      <img src="/images/color/star.svg" class="card-deal__rating-star">
+                      <div class="card-deal__rating-number">4.4</div>
+                    </div>
+                  </div>
+                  <div class="card-deal__bar-sub">
+                    <div class="card-deal__location">
+                      <img src="/images/fill/mark.svg" class="card-deal__location-img">
+                      <div class="card-deal__locationg-name">UK</div>
+                    </div>
+                    <div class="card-deal__price-box">
+                      <div class="card-deal__price-actual">$850</div>
+                    </div>
+                  </div>
+                  <div class="card-deal__overlay">
+                    <button class="button button_primary button_brand card-deal__book">Book Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="exclusive-deals__nav">
+            <button class="button-circle button-circle_fill exclusive-deals__nav_prev">
+              <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="button-circle__arrow">
+                <path d="M0.292893 8.70711C-0.0976311 8.31658 -0.0976311 7.68342 0.292893 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41421 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292893 8.70711ZM17 8V9H1V8V7H17V8Z" fill="currentColor"></path>
+              </svg>
+            </button>
+            <button class="button-circle button-circle_fill exclusive-deals__nav_next">
+              <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="button-circle__arrow">
+                <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="currentColor"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="best-vacation-plan section-base">
+        <div class="responsive-container best-vacation-plan__container">
+          <div class="best-vacation-plan__palms">
+            <img src="/images/sections/best-vacation-plan/palms.svg" alt="">
+          </div>
+          <h2 class="best-vacation-plan__title typo-h2">Best <span class="text-brand">vacation plan</span></h2>
+          <p class="typo-para-b best-vacation-plan__description">Plan your perfect vacation with our travel agency. Choose among hundreds of all-inclusive offers!</p>
+          <div class="best-vacation-plan__nav">
+            <button class="button-circle button-circle_fill best-vacation-plan__nav_prev">
+              <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="button-circle__arrow">
+                <path d="M0.292893 8.70711C-0.0976311 8.31658 -0.0976311 7.68342 0.292893 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41421 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292893 8.70711ZM17 8V9H1V8V7H17V8Z" fill="currentColor"></path>
+              </svg>
+            </button>
+            <button class="button-circle button-circle_fill best-vacation-plan__nav_next">
+              <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="button-circle__arrow">
+                <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="currentColor"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="best-vacation-plan__swiper swiper">
+            <div class="swiper-wrapper">
+              <div class="best-vacation-plan__slide swiper-slide">
+                <div class="card-plan">
+                  <a class="card-plan__link" href="#"></a>
+                  <img class="card-plan__img" src="/images/components/card-plan/preview-01.png" alt="Rome trip">
+                  <div class="card-plan__main-bar">
+                    <div class="card-plan__title typo-h3">Rome, Italty</div>
+                    <div class="card-plan__price">$5,42k</div>
+                  </div>
+                  <div class="card-plan__sub-bar">
+                    <div class="card-plan__trip">
+                      <img class="card-plan__trip-img" src="/images/fill/needle.svg" alt="">
+                      <div class="card-plan__trip-label">10 Days Trip</div>
+                    </div>
+                    <div class="card-plan__review">
+                      <img class="card-plan__review-img" src="/images/color/star.svg" alt="">
+                      <div class="card-plan__review-label">4.8</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="best-vacation-plan__slide swiper-slide">
+                <div class="card-plan">
+                  <a class="card-plan__link" href="#"></a>
+                  <img class="card-plan__img" src="/images/components/card-plan/preview-02.png" alt="London trip">
+                  <div class="card-plan__main-bar">
+                    <div class="card-plan__title typo-h3">London, UK</div>
+                    <div class="card-plan__price">$2,42k</div>
+                  </div>
+                  <div class="card-plan__sub-bar">
+                    <div class="card-plan__trip">
+                      <img class="card-plan__trip-img" src="/images/fill/needle.svg" alt="">
+                      <div class="card-plan__trip-label">07 Days Trip</div>
+                    </div>
+                    <div class="card-plan__review">
+                      <img class="card-plan__review-img" src="/images/color/star.svg" alt="">
+                      <div class="card-plan__review-label">4.7</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="best-vacation-plan__slide swiper-slide">
+                <div class="card-plan">
+                  <a class="card-plan__link" href="#"></a>
+                  <img class="card-plan__img" src="/images/components/card-plan/preview-03.png" alt="Osaka trip">
+                  <div class="card-plan__main-bar">
+                    <div class="card-plan__title typo-h3">Osaka, Japan</div>
+                    <div class="card-plan__price">$5,42k</div>
+                  </div>
+                  <div class="card-plan__sub-bar">
+                    <div class="card-plan__trip">
+                      <img class="card-plan__trip-img" src="/images/fill/needle.svg" alt="">
+                      <div class="card-plan__trip-label">10 Days Trip</div>
+                    </div>
+                    <div class="card-plan__review">
+                      <img class="card-plan__review-img" src="/images/color/star.svg" alt="">
+                      <div class="card-plan__review-label">4.9</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="best-vacation-plan__slide swiper-slide">
+                <div class="card-plan">
+                  <a class="card-plan__link" href="#"></a>
+                  <img class="card-plan__img" src="/images/components/card-plan/preview-01.png" alt="Rome trip">
+                  <div class="card-plan__main-bar">
+                    <div class="card-plan__title typo-h3">Rome, Italty</div>
+                    <div class="card-plan__price">$5,42k</div>
+                  </div>
+                  <div class="card-plan__sub-bar">
+                    <div class="card-plan__trip">
+                      <img class="card-plan__trip-img" src="/images/fill/needle.svg" alt="">
+                      <div class="card-plan__trip-label">10 Days Trip</div>
+                    </div>
+                    <div class="card-plan__review">
+                      <img class="card-plan__review-img" src="/images/color/star.svg" alt="">
+                      <div class="card-plan__review-label">4.8</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="best-vacation-plan__slide swiper-slide">
+                <div class="card-plan">
+                  <a class="card-plan__link" href="#"></a>
+                  <img class="card-plan__img" src="/images/components/card-plan/preview-02.png" alt="London trip">
+                  <div class="card-plan__main-bar">
+                    <div class="card-plan__title typo-h3">London, UK</div>
+                    <div class="card-plan__price">$2,42k</div>
+                  </div>
+                  <div class="card-plan__sub-bar">
+                    <div class="card-plan__trip">
+                      <img class="card-plan__trip-img" src="/images/fill/needle.svg" alt="">
+                      <div class="card-plan__trip-label">07 Days Trip</div>
+                    </div>
+                    <div class="card-plan__review">
+                      <img class="card-plan__review-img" src="/images/color/star.svg" alt="">
+                      <div class="card-plan__review-label">4.7</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="best-vacation-plan__slide swiper-slide">
+                <div class="card-plan">
+                  <a class="card-plan__link" href="#"></a>
+                  <img class="card-plan__img" src="/images/components/card-plan/preview-03.png" alt="Osaka trip">
+                  <div class="card-plan__main-bar">
+                    <div class="card-plan__title typo-h3">Osaka, Japan</div>
+                    <div class="card-plan__price">$5,42k</div>
+                  </div>
+                  <div class="card-plan__sub-bar">
+                    <div class="card-plan__trip">
+                      <img class="card-plan__trip-img" src="/images/fill/needle.svg" alt="">
+                      <div class="card-plan__trip-label">10 Days Trip</div>
+                    </div>
+                    <div class="card-plan__review">
+                      <img class="card-plan__review-img" src="/images/color/star.svg" alt="">
+                      <div class="card-plan__review-label">4.9</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="what-people-say section-base">
+        <div class="responsive-container what-people-say__container">
+          <div class="what-people-say__flies">
+            <img src="/images/sections/what-people-say/flies.svg" alt="Flies svg decoration">
+          </div>
+          <div class="what-people-say__info">
+            <h2 class="what-people-say__title typo-h2">What people say <span class="text-brand">about us</span></h2>
+            <p class="what-people-say__description typo-para-b">Our Clients send us bunch of smilies with our services and we love them.</p>
+            <div class="what-people-say__nav">
+              <button class="button-circle button-circle_fill what-people-say__nav_prev">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="button-circle__arrow">
+                  <path d="M0.292893 8.70711C-0.0976311 8.31658 -0.0976311 7.68342 0.292893 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41421 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292893 8.70711ZM17 8V9H1V8V7H17V8Z" fill="currentColor"></path>
+                </svg>
+              </button>
+              <button class="button-circle button-circle_fill what-people-say__nav_next">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="button-circle__arrow">
+                  <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="currentColor"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="what-people-say__reviews">
+            <div class="what-people-say__swiper swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide what-people-say__slide">
+                  <div class="card-review what-people-say__slide-inner">
+                    <div class="card-review__avatar-demo card-review__avatar-demo-a">B</div>
+                    <p class="card-review__comment typo-content">“<!-- -->On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.<!-- -->”</p>
+                    <div class="card-review__author ">Mike taylor</div>
+                    <div class="card-review__location">Lahore, Pakistan</div>
+                  </div>
+                </div>
+                <div class="swiper-slide what-people-say__slide">
+                  <div class="card-review what-people-say__slide-inner">
+                    <div class="card-review__avatar-demo card-review__avatar-demo-b">R</div>
+                    <p class="card-review__comment typo-content">“<!-- -->Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro molestias laboriosam delectus est mollitia sit reiciendis placeat numquam, amet ea! Tenetur soluta illum ipsa nulla.<!-- -->”</p>
+                    <div class="card-review__author ">Chris Thomas</div>
+                    <div class="card-review__location">Lahore, Pakistan</div>
+                  </div>
+                </div>
+                <div class="swiper-slide what-people-say__slide">
+                  <div class="card-review what-people-say__slide-inner">
+                    <div class="card-review__avatar-demo card-review__avatar-demo-c">A</div>
+                    <p class="card-review__comment typo-content">“<!-- -->On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.<!-- -->”</p>
+                    <div class="card-review__author ">Roman Aveglo</div>
+                    <div class="card-review__location">Lahore, Pakistan</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="latest-blog section-base">
+        <div class="responsive-container latest-blog__container">
+          <h2 class="typo-h2 latest-blog__title">Get update with <span class="text-brand">latest blog</span></h2>
+          <div class="latest-blog__swiper swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide latest-blog__slide">
+                <div class="card-blog">
+                  <a class="card-blog__link" href="#"></a>
+                  <div class="card-blog__media">
+                    <img class="card-blog__media-img" src="/images/sections/latest-blog/original-01.jpg" alt="Orange beautiful house">
+                  </div>
+                  <div class="card-blog__title">The Amazing Difference a Year of Travelling.</div>
+                  <div class="card-blog__date">August 17, 2021</div>
+                </div>
+              </div>
+              <div class="swiper-slide latest-blog__slide">
+                <div class="card-blog">
+                  <a class="card-blog__link" href="#"></a>
+                  <div class="card-blog__media">
+                    <img class="card-blog__media-img" src="/images/sections/latest-blog/original-02.jpg" alt="Cute house on beach">
+                  </div>
+                  <div class="card-blog__title">Travel far enough, you meet yourself.</div>
+                  <div class="card-blog__date">July 27, 2021</div>
+                </div>
+              </div>
+              <div class="swiper-slide latest-blog__slide">
+                <div class="card-blog">
+                  <a class="card-blog__link" href="#"></a>
+                  <div class="card-blog__media">
+                    <img class="card-blog__media-img" src="/images/sections/latest-blog/original-03.jpg" alt="Africa columns">
+                  </div>
+                  <div class="card-blog__title">How to Save Money While Visiting Africa.</div>
+                  <div class="card-blog__date">June 23, 2021</div>
+                </div>
+              </div>
+              <div class="swiper-slide latest-blog__slide">
+                <div class="card-blog">
+                  <a class="card-blog__link" href="#"></a>
+                  <div class="card-blog__media">
+                    <img class="card-blog__media-img" src="/images/sections/latest-blog/original-04.jpg" alt="Rocks and Stones">
+                  </div>
+                  <div class="card-blog__title">Reflections on 5 Months of Travel: Time to Hang</div>
+                  <div class="card-blog__date">May 03, 2021</div>
+                </div>
+              </div>
+              <div class="swiper-slide latest-blog__slide">
+                <div class="card-blog">
+                  <a class="card-blog__link" href="#"></a>
+                  <div class="card-blog__media">
+                    <img class="card-blog__media-img" src="/images/sections/latest-blog/original-01.jpg" alt="Orange beautiful house">
+                  </div>
+                  <div class="card-blog__title">The Amazing Difference a Year of Travelling.</div>
+                  <div class="card-blog__date">August 17, 2021</div>
+                </div>
+              </div>
+              <div class="swiper-slide latest-blog__slide">
+                <div class="card-blog">
+                  <a class="card-blog__link" href="#"></a>
+                  <div class="card-blog__media">
+                    <img class="card-blog__media-img" src="/images/sections/latest-blog/original-02.jpg" alt="Cute house on beach">
+                  </div>
+                  <div class="card-blog__title">Travel far enough, you meet yourself.</div>
+                  <div class="card-blog__date">July 27, 2021</div>
+                </div>
+              </div>
+              <div class="swiper-slide latest-blog__slide">
+                <div class="card-blog">
+                  <a class="card-blog__link" href="#"></a>
+                  <div class="card-blog__media">
+                    <img class="card-blog__media-img" src="/images/sections/latest-blog/original-03.jpg" alt="Africa columns">
+                  </div>
+                  <div class="card-blog__title">How to Save Money While Visiting Africa.</div>
+                  <div class="card-blog__date">June 23, 2021</div>
+                </div>
+              </div>
+              <div class="swiper-slide latest-blog__slide">
+                <div class="card-blog">
+                  <a class="card-blog__link" href="#"></a>
+                  <div class="card-blog__media">
+                    <img class="card-blog__media-img" src="/images/sections/latest-blog/original-04.jpg" alt="Rocks and Stones">
+                  </div>
+                  <div class="card-blog__title">Reflections on 5 Months of Travel: Time to Hang</div>
+                  <div class="card-blog__date">May 03, 2021</div>
+                </div>
+              </div>
+            </div>
+            <div class="latest-blog__pagination"></div>
+          </div>
+        </div>
+      </div>
+      <div class="subscribe-section section-base">
+        <div class="responsive-container subscribe__container">
+          <div class="subscribe-section__block">
+            <form id="subscribe-form" class="subscribe-section__block-inner">
+              <h2 class="subscribe-section__title typo-h2">Subscribe and get exclusive deals &amp; offer</h2>
+              <div class="form-group">
+                <div class="input-strong ">
+                  <input class="input-strong__element subscribe-section__input" required="" minLength="3" maxLength="32" data-pristine-email-message="You provided incorrect email address" type="email" placeholder="" id="email" name="email">
+                  <label class="input-strong__label subscribe-section__input-label" for="email">Enter email</label>
+                  <button class="subscribe-section__input-button input-strong__button">Subscribe</button>
+                  <img class="input-strong__icon" src="/images/sections/subscribe/email.svg" alt="Email">
+                </div>
+              </div>
+            </form>
+            <img class="subscribe-section__ellipse" src="/images/sections/subscribe/ellipses.svg" alt="Ellipses">
+            <img class="subscribe-section__palms" src="/images/sections/subscribe/palms.svg" alt="Palms">
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="responsive-container footer__container-01">
+          <div class="footer__brand">
+            <a href="#logo" class="logo footer__logo"><span class="logo__title">Trabook</span>
+              <img class="logo__img" src="/images/front/logo.svg" alt="logotype svg">
+            </a>
+            <p class="footer__description">Book your trip in minute, get full Control for much longer.</p>
+            <div class="footer__socials">
+              <a class="footer__socials-link " href="#">
+                <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="general-icon footer__socials-img social-shadow">
+                  <g clip-path="url(#clip0_610_3)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3333 27.3337C20.6971 27.3337 26.6667 21.3641 26.6667 14.0003C26.6667 6.63653 20.6971 0.666992 13.3333 0.666992C5.96954 0.666992 0 6.63653 0 14.0003C0 21.3641 5.96954 27.3337 13.3333 27.3337Z" fill="" class="general-icon-bg"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0296 12.5331C14.8214 12.4672 14.582 12.4233 14.3634 12.4233C14.0928 12.4233 13.5099 12.6099 13.5099 12.9721V13.8392H14.8943V15.299H13.5099V19.3272H12.1152V15.299H11.4282V13.8392H12.1152V13.1038C12.1152 11.9952 12.594 11.0732 13.7493 11.0732C14.1449 11.0732 14.8526 11.0952 15.2377 11.2379L15.0296 12.5331Z" fill="" class="general-icon-line"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_610_3">
+                      <rect width="26.6667" height="26.6667" fill="white" transform="translate(0 0.666992)"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+              <a class="footer__socials-link" href="#">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="general-icon footer__socials-img social-shadow">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z" class="general-icon-bg"></path>
+                  <g clip-path="url(#clip0_201_676)">
+                    <path d="M20.3776 9.95557H12.3332C11.4143 9.95557 10.6665 10.7033 10.6665 11.6222V19.6667C10.6665 20.5858 11.4143 21.3333 12.3332 21.3333H20.3776C21.2967 21.3333 22.0443 20.5858 22.0443 19.6667V11.6222C22.0443 10.7033 21.2967 9.95557 20.3776 9.95557ZM21.3776 19.6667C21.3776 20.218 20.9289 20.6667 20.3776 20.6667H12.3332C11.7818 20.6667 11.3332 20.218 11.3332 19.6667V11.6222C11.3332 11.0709 11.7818 10.6222 12.3332 10.6222H20.3776C20.9289 10.6222 21.3776 11.0709 21.3776 11.6222V19.6667Z" class="general-icon-line" fill=""></path>
+                    <path d="M20.0221 11.311C19.6546 11.311 19.3555 11.6101 19.3555 11.9777C19.3555 12.3453 19.6546 12.6444 20.0221 12.6444C20.3897 12.6444 20.6888 12.3453 20.6888 11.9777C20.6888 11.6101 20.3897 11.311 20.0221 11.311Z" class="general-icon-line" fill=""></path>
+                    <path d="M16.3555 12.6444C14.7012 12.6444 13.3555 13.9902 13.3555 15.6444C13.3555 17.2986 14.7012 18.6444 16.3555 18.6444C18.0097 18.6444 19.3555 17.2986 19.3555 15.6444C19.3555 13.9902 18.0097 12.6444 16.3555 12.6444ZM16.3555 17.9777C15.0688 17.9777 14.0221 16.9311 14.0221 15.6444C14.0221 14.3577 15.0688 13.3111 16.3555 13.3111C17.6421 13.3111 18.6888 14.3577 18.6888 15.6444C18.6888 16.9311 17.6421 17.9777 16.3555 17.9777Z" class="general-icon-line" fill=""></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_201_676">
+                      <rect width="11.3778" height="11.3778" fill="white" transform="translate(10.6665 9.95557)"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+              <a class="footer__socials-link " href="#">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="general-icon footer__socials-img social-shadow">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0003 27.3337C21.3641 27.3337 27.3337 21.3641 27.3337 14.0003C27.3337 6.63653 21.3641 0.666992 14.0003 0.666992C6.63653 0.666992 0.666992 6.63653 0.666992 14.0003C0.666992 21.3641 6.63653 27.3337 14.0003 27.3337Z" fill="" class="general-icon-bg"></path>
+                  <path d="M18.8782 10.7734C18.4912 10.9432 18.0788 11.0557 17.6489 11.1103C18.0912 10.8463 18.4288 10.4313 18.5875 9.93116C18.1751 10.177 17.7198 10.3507 17.2346 10.4476C16.8431 10.0307 16.285 9.77246 15.6762 9.77246C14.4951 9.77246 13.5442 10.7312 13.5442 11.9064C13.5442 12.0756 13.5585 12.2382 13.5936 12.3929C11.82 12.3064 10.2505 11.4564 9.19623 10.1614C9.01217 10.4808 8.9042 10.8463 8.9042 11.2398C8.9042 11.9786 9.28469 12.6336 9.85184 13.0128C9.50908 13.0063 9.17282 12.9068 8.88794 12.75C8.88794 12.7565 8.88794 12.765 8.88794 12.7734C8.88794 13.8102 9.62745 14.6713 10.5972 14.8697C10.4235 14.9172 10.2343 14.9399 10.0379 14.9399C9.90127 14.9399 9.76339 14.9321 9.63396 14.9035C9.91038 15.7484 10.6948 16.3695 11.6275 16.3897C10.9016 16.9575 9.97997 17.2996 8.98225 17.2996C8.80729 17.2996 8.63948 17.2918 8.47168 17.2703C9.41672 17.8798 10.5367 18.2277 11.7445 18.2277C15.6704 18.2277 17.8167 14.9757 17.8167 12.1569C17.8167 12.0625 17.8135 11.9715 17.8089 11.8811C18.2323 11.5806 18.5881 11.2053 18.8782 10.7734Z" fill="#444444" class="general-icon-line"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer__table">
+            <div class="footer__table-col">
+              <div class="footer__table-title">Company</div>
+              <ul class="footer__table-menu">
+                <li class="footer__table-item">
+                  <a class="footer__table-link" href="#">About</a>
+                </li>
+                <li class="footer__table-item">
+                  <a class="footer__table-link" href="#">Careers</a>
+                </li>
+                <li class="footer__table-item">
+                  <a class="footer__table-link" href="#">Logistics</a>
+                </li>
+                <li class="footer__table-item">
+                  <a class="footer__table-link" href="#">Privacy &amp; Policy</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__table-col">
+              <div class="footer__table-title">Contact</div>
+              <ul class="footer__table-menu">
+                <li class="footer__table-item">
+                  <a class="footer__table-link" href="#">Help/FAQ</a>
+                </li>
+                <li class="footer__table-item">
+                  <a class="footer__table-link" href="#">Press</a>
+                </li>
+                <li class="footer__table-item">
+                  <a class="footer__table-link" href="#">Affilates</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__table-col">
+              <div class="footer__table-title">More</div>
+              <ul class="footer__table-menu">
+                <li class="footer__table-item">
+                  <a class="footer__table-link" href="#">Press Centre</a>
+                </li>
+                <li class="footer__table-item">
+                  <a class="footer__table-link" href="#">Our Blog</a>
+                </li>
+                <li class="footer__table-item">
+                  <a class="footer__table-link" href="#">Low fare tips</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="responsive-container undefined">
+          <div class="footer__delimiter"></div>
+        </div>
+        <div class="responsive-container footer__container-02">
+          <div class="footer__copyright">Copyright, Trabook 2025. All rights reserved.</div>
+          <div class="footer__term">
+            <a class="footer__term-link" href="#">Terms &amp; Conditions</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="popovers_box">
+      <div id="tippy-popover-promote-location">
+        <h3 class="typo-h3 text-primary-b">Location</h3>
+        <p class="mb-4">Where are you going</p>
+        <p class="mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita consectetur iste fugit magni ullam officiis?</p>
+        <button class="button button_primary button_brand w-full" id="promote-location-action">Select</button>
+      </div>
+      <div id="tippy-popover-promote-date">
+        <h3 class="typo-h3 text-primary-b">Date</h3>
+        <p class="mb-4">Pick up the date</p>
+        <input class="date-input" id="promote-datepicker">
+      </div>
+      <div id="tippy-popover-promote-guest">
+        <h3 class="typo-h3 text-primary-b">Guest</h3>
+        <p class="mb-4">Number of guest</p>
+        <p class="mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita consectetur iste fugit magni ullam officiis?</p>
+        <button class="button button_primary button_brand w-full promote-guest-action-class" id="promote-guest-action">Select</button>
+      </div>
+    </div>
+    <div class="mobile-burger-sheet">
+      <div class="burger burger-sheet"><span class="burger__stick burger__stick_01"></span><span class="burger__stick burger__stick_02"></span><span class="burger__stick burger__stick_03"></span></div>
+      <div class="mobile-burger-sheet__container">
+        <div class="mobile-burger-sheet__logo">
+          <a href="#" class="mobile-burger-sheet__logo"><span class="typo-h3 mobile-burger-sheet__logo-title">Trabook</span>
+            <img class="mobile-burger-sheet__logo-img" src="/public/images/front/logo.svg" alt="logotype trabook">
+          </a>
+        </div>
+        <ul class="mobile-burger-sheet__menu">
+          <li class="mobile-burger-sheet__item">
+            <a href="#" class="mobile-burger-sheet__link">Home</a>
+          </li>
+          <li class="mobile-burger-sheet__item">
+            <a href="#" class="mobile-burger-sheet__link">About</a>
+          </li>
+          <li class="mobile-burger-sheet__item">
+            <a href="#" class="mobile-burger-sheet__link">Destination</a>
+          </li>
+          <li class="mobile-burger-sheet__item">
+            <a href="#" class="mobile-burger-sheet__link">Tour</a>
+          </li>
+          <li class="mobile-burger-sheet__item">
+            <a href="#" class="mobile-burger-sheet__link">Blog</a>
+          </li>
+        </ul>
+        <div class="mobile-burger-sheet__btn-container">
+          <button class="button button_brand button_ghost">Login</button>
+          <button class="button button_brand button_primary">Sign up</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

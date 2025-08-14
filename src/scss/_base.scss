@@ -32,6 +32,13 @@ body.scroll-lock {
   margin: 0 auto;
 }
 
+.pristine-error {
+  background-color: #fff;
+  color: red;
+  border-radius: 6px 6px 14px 14px;
+  padding: 4px 10px;
+}
+
 @media (min-width: $media-md) {
   .responsive-container {
     max-width: $media-md;

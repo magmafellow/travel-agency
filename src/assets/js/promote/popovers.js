@@ -1,12 +1,14 @@
 import popoverFabric from "../utils/popover-fabric"
 
 window.addEventListener("DOMContentLoaded", function () {
-  popoverFabric(
+  const locationTippy = popoverFabric(
     "#tippy-trigger-promote-location",
-    "#tippy-popover-promote-location"
+    "#tippy-popover-promote-location",
+    true,
+    "#promote-location-action"
   )
 
-  popoverFabric(
+  const dateTippy = popoverFabric(
     "#tippy-trigger-promote-date",
     "#tippy-popover-promote-date",
     false
@@ -15,7 +17,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const guestTippy = popoverFabric(
     "#tippy-trigger-promote-guest",
     "#tippy-popover-promote-guest",
-    false,
-    '#promote-guest-action'
+    true,
+    "#promote-guest-action"
   )
 })
