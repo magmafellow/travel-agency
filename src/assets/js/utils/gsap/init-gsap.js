@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger)
-  console.log('GSAP for [latest-blog.js] is ready')
+  gsap.registerPlugin(SplitText);
+  console.log('GSAP is ready')
 })

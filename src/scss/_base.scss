@@ -39,6 +39,10 @@ body.scroll-lock {
   padding: 4px 10px;
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
 @media (min-width: $media-md) {
   .responsive-container {
     max-width: $media-md;

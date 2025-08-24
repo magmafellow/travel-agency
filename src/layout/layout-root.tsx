@@ -29,6 +29,7 @@ const LayoutRoot = ({ children }: { children: any }) => {
         {/* GSAP */}
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
 
         {/* Pristine Validation */}
         <script src="/libs/pristine.js"></script>
@@ -43,7 +44,7 @@ const LayoutRoot = ({ children }: { children: any }) => {
         
         {/* Custom code */}
         <link rel="stylesheet" href="/src/scss/main.scss" />
-        <script type="module" src="/src/assets/js/index.js"></script>
+        <script type="module" defer src="/src/assets/js/index.js"></script>
       </Head>
       <div className="root typo-para-base">{children}</div>
 

@@ -9,7 +9,7 @@ const Main = () => {
     <main className="grow promote section-base">
       <ResponsiveContainer className="promote__container-primary">
         <div className="promote__textish">
-          <h1 className="promote__title typo-h1">
+          <h1 className="promote__title opacity-0 typo-h1">
             Get started your exciting{" "}
             <span className="text-brand">journey</span> with us.
           </h1>
@@ -23,7 +23,7 @@ const Main = () => {
         </div>
         <div className="promote__picturish">
           {/* Relative container for decorations */}
-          <div className="promote__picturish-shell">
+          <div className="promote__picturish-shell opacity-0">
             <img
               className="promote__picturish-shell-guy"
               src="/images/sections/promote/guy.png"
