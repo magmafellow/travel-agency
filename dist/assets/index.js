@@ -1,4 +1,4 @@
-import{c as $r,g as Br}from"/travel-agency/dist/assets/_commonjsHelpers-725317a4.js";var Mn={exports:{}};/*!
+import{c as $r,g as Br}from"/travel-agency/dist/assets/commonhelper.js";var Mn={exports:{}};/*!
  * jQuery JavaScript Library v3.7.1
  * https://jquery.com/
  *
